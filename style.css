@@ -34,6 +34,41 @@ body {
     background-color: var(--color-white);
 }
 
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 2rem 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.header-container li {
+    list-style: none;
+    margin-left: 2rem;
+    display: inline-block;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+} .logo a {
+    margin-left: 20px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -649,7 +684,18 @@ p {
 }
 
 /* Responsive Design */
+@media (max-width: 640px) {
+    header {
+        display: none;
+    }
+
+    .container {
+        padding: 3rem;
+    }  
+}
+
 @media (min-width: 640px) {
+
     .hero-buttons {
         flex-direction: row;
     }
